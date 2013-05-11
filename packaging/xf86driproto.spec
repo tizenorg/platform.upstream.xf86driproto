@@ -33,6 +33,7 @@ make %{?jobs:-j%jobs}
 
 
 %files
+%license COPYING
 %defattr(-,root,root,-)
 %{_includedir}/X11/dri/*.h
 %{_datadir}/pkgconfig/*.pc
