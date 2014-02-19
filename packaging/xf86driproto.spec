@@ -1,3 +1,5 @@
+%bcond_with x
+
 Name:     xf86driproto
 Summary:  X.Org X11 Protocol xf86driproto
 Version:  2.1.1
@@ -10,6 +12,10 @@ Source1001: 	xf86driproto.manifest
 
 BuildRequires: pkgconfig
 BuildRequires: pkgconfig(xorg-macros)
+
+%if !%{with x}
+ExclusiveArch:
+%endif
 
 # some file to be intalled can be ignored when rpm generates packages
 %define _unpackaged_files_terminate_build 0
